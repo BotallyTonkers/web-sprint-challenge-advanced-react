@@ -1,8 +1,21 @@
+import React from "react";
 import AppFunctional from "./AppFunctional";
-import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import userEvent from '@testing-library/user-event'
+import AppClass from "./AppClass";
+
+test('sanity', () => {
+  expect(true).toBe(true)
+})
+test('render AppClass without errors', () => {
+  render(<AppClass/>);
+});
+
+test('render AppFunctional without errors', () => {
+  render(<AppFunctional/>);
+});
+
+
 
 test('sanity', () => {
   expect(true).toBe(true)
